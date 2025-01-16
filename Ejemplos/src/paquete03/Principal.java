@@ -8,6 +8,7 @@ package paquete03;
 import paquete04.OperadorUno;
 import paquete04.OperadorDos;
 import paquete05.OperadorTres;
+import paquete06.Imprimir;
 
 // import paquete04.*;
 /**
@@ -22,11 +23,9 @@ public class Principal {
         int suma = OperadorDos.obtenerSuma(valorA, valorB);
         int multiplicacion = OperadorTres.obtenerMultiplicacion(valorA, 
                                                                 valorB);
-        System.out.printf("La suma de %d + %d es igual a: %d\n"
-                + "La multiplicacion de %d * %d es igual a: %d\n",
-                valorA,valorB,
-                suma,
-                valorA, valorB,
-                multiplicacion);
+        // Estoy llamando a un procedimiento que esta en el paquete06, en la clase Imprimir
+        // el procedimiento se llama imprimirMensaje y le envio los parametros segun su correspondnecia
+        // el procedimiento imprime un mensjae en base a los valores anteriores
+        Imprimir.imprimirMensaje(valorA,valorB,suma,multiplicacion);
     }
 }
